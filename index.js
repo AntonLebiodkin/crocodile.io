@@ -14,10 +14,14 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
   socket.on('chatMessage', function(from, msg){
     io.emit('chatMessage', from, msg);
-  });
+  });  
   socket.on('notifyUser', function(user){
     io.emit('notifyUser', user);
   });
+  socket.on('picture', function(from, img){
+    io.emit('picture', from, img);
+  });
+  
 });
  
 // Listen application request on port 3000
