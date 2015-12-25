@@ -7,7 +7,7 @@ var path = require('path');
 app.get('/', function(req, res){
   var express=require('express');
   app.use(express.static(path.join(__dirname)));
-  res.sendFile(path.join(__dirname, '../CrocodileWeb', 'index.html'));
+  res.sendFile(path.join(__dirname, '/', 'index.html'));
 });
 
 
